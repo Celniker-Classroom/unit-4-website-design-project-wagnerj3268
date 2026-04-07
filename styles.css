@@ -1,9 +1,47 @@
 /* Add Global styles here */
+body {
+    background:white;
+    margin: 0px;
+}
+
+main {
+    margin-left:20px;
+    margin-right:20px;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    
+}
 h1 {
     color:rgb(199, 56, 56);
-    font-size: 50px;
-    font-family:'Times New Roman', Times, serif
+    font-family:'Times New Roman', Times, serif;
+    text-align: center;
 }
+
+.navbar ul{
+    list-style-type: none;
+    background-color: rgb(199, 56, 56); 
+    padding: 5px;
+    margin: 5px;
+    overflow: hidden;
+}
+
+.navbar a{
+    color:white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+.navbar a:hover{
+    background-color: white;
+    color: black;
+}
+
+.navbar li{
+    float:left;
+}
+
+
 
 img {
     width: 300px;
@@ -32,6 +70,3 @@ p {
 }
 
 
-body {
-    backround:white
-}
