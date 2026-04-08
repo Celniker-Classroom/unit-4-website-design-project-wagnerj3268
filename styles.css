@@ -29,25 +29,40 @@ h2 {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+.about_us_image {
+    width: 250px;px;
+    height:auto
+}
 .no_border {
     border-style: none;
 }
 .sub_title {
     font-size: 30px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 10px;
+
 }
 .link_style {
-    font-size: ;
+    font: size 10px;
 }
 .red_border {
     color: black;
     border-style:solid;
     border-color:rgb(199, 56, 56);
-    width: 300px;
+    width: 30%;
     padding:10px;
     list-style: none;
-    margin: 10px
+    margin: 10px;
+    display: inline-block;
+}
+.red_border_about_us {
+    color: black;
+    border-style:solid;
+    border-color:rgb(199, 56, 56);
+    width: 250px;
+    padding:10px;
+    list-style: none;
+    margin: 10px;
+    
 }
 
 .center_align {
@@ -86,7 +101,7 @@ h2 {
 .calendar_image {
     width: 100px;
     height: auto;
-    float:right;
+    
 }
 
 .img_about_us {
@@ -103,9 +118,7 @@ table, th, td {
     border: 1px solid black;
     text-align: center;
 }
-h2 {
 
-}
 
 
 p {
