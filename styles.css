@@ -1,8 +1,9 @@
 /* Add Global styles here */
 body {
-    background:white;
+    background-color:white;
     margin: 0px;
-    transition: background-color 0.3s, color 0.3s; 
+    color:black;
+    transition: all 0.3s ease; 
 }
 
 main {
@@ -22,6 +23,7 @@ h2 {
     color:black;
     font-family:'Times New Roman', Times, serif;
 }
+/*style for fall/spring semester */
 .container {
     display: flex;
     gap: 20px;
@@ -77,6 +79,68 @@ h2 {
     height:auto;
     margin:10px;
 }
+/*end of fall/spring semseter style */
+
+/*style for our team */
+.team_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+        "limg ltxt rimg rtxt"
+        "lname lname rname rname"
+        "jimg jtxt aimg atxt"
+        "jname jname aname aname";
+    gap: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+.names_about_us {
+    font-size:20px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.red_border_about_us {
+    color: black;
+    border-style:solid;
+    border-color:rgb(199, 56, 56);
+    width: 100%;
+    max-width: 150px;
+    padding:10px;
+    margin: 10px;
+    font-size:20px;
+    text-align:start;
+    
+}
+
+.img_about_us {
+    width: 100%;
+    max-width: 150px;
+    border-radius: 10px;
+}
+
+.img-lainey { grid-area: limg; }
+.q-lainey { grid-area: ltxt; }
+
+.img-rozy { grid-area: rimg; }
+.q-rozy { grid-area: rtxt; }
+
+.name-lainey { grid-area: lname; }
+.name-rozy { grid-area: rname; }
+
+.img-julia { grid-area: jimg; }
+.q-julia { grid-area: jtxt; }
+
+.img-anushka { grid-area: aimg; }
+.q-anushka { grid-area: atxt; }
+
+.name-julia { grid-area: jname; }
+.name-anushka { grid-area: aname; }
+
 
 .sub_title {
     font-size: 30px;
@@ -86,29 +150,12 @@ h2 {
 .link_style {
     font: size 10px;
 }
-.names_about_us {
-    font-size:20px;
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-top: 10px;
-    margin-bottom: 15px;
-}
 
-.red_border_about_us {
-    color: black;
-    border-style:solid;
-    border-color:rgb(199, 56, 56);
-    width: 250px;
-    padding:10px;
-    list-style: none;
-    margin: 10px;
-    font-size:20px;
-    
-}
 
 .center_align {
     text-align: center;
 }
+/*nav bar style */
 .navbar ul{
     list-style-type: none;
     background-color: rgb(199, 56, 56); 
@@ -126,6 +173,7 @@ h2 {
     text-align: center;
     
 }
+
 .navbar a:hover{
     background-color: white;
     color: black;
@@ -140,17 +188,67 @@ h2 {
 
 }
 
-
-
-.img_about_us {
-    width: 300px;
-    height: 200px;
-    margin: 10px;
-    border-width: 4px;
-    border-style: solid;
-    border-radius: 10px;
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    transition: all 0.3s ease;
+    padding: 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
+.navbar.shrink {
+    padding: 5px 0;
+    transform: scale(0.95);
+}
+
+/* end of nav bar style*/
+
+/*dark toggle button style */
+#darktoggle {
+    margin: 10px;
+    padding: 10px;
+    border: 3px;
+    border-style: dotted;
+    border-color: rgb(199, 56, 56);
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 20px;
+    font-family:'Times New Roman', Times, serif;
+    background-color: white;
+    color: black;
+}
+
+body.dark-mode {
+    background-color: rgb(199, 56, 56);
+    color:white;
+}
+ 
+body.dark-mode .navbar {
+    background-color: white;
+    color:black;
+}
+/* end of dark mode button*/
+
+/* magnifier glass */
+.img-magnifier-container {
+    position: relative;
+}
+.img-magnifier-glass {
+    position: absolute;
+    border: 3px solid #000;
+    border-radius: 50%;
+    cursor:none;
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-color: white;
+    pointer-events: none;
+}
 table, th, td {
     float:left;
     border: 1px solid black;

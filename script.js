@@ -1,12 +1,75 @@
-// add javascript here
-window.onscroll = function() {scrollFunction()};
+window.addEventListener("scroll", function () {
+    const navbar = document.getElementById("navbar");
 
-function scrollFunction() {
-  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-    document.getElementById("navbar").style.padding = "30px 10px";
-    document.getElementById("logo").style.fontSize = "25px";
-  } else {
-    document.getElementById("navbar").style.padding = "80px 10px";
-    document.getElementById("logo").style.fontSize = "35px";
+    if (window.scrollY > 50) {
+        navbar.classList.add("shrink");
+    } else {
+        navbar.classList.remove("shrink");
+    }
+});
+
+const button = document.getElementById("darktoggle");
+const body = document.getElementById("page");
+
+button.addEventListener("click", function () {
+  body.classList.toggle("dark-mode");
+});
+
+function magnify(imgID, zoom) {
+
+  const img = document.getElementById(imgID);
+  const glass = document.createElement("div");
+  glass.setAttribute("class", "img-magnifier-glass");
+  img.parentElement.insertBefore(glass, img);
+  glass.style.backgroundImage = "url('" + img.src + "')";
+  glass.style.backgroundSize = (img.width * zoom) + "px " + (img.height * zoom) + "px";
+  const bw = 3;
+  glass.addEventListener("mousemove", moveMagnifier);
+  img.addEventListener("mousemove", moveMagnifier);
+  function moveMagnifier(e) {
+    let pos, x, y;
+    e.preventDefault();
+
+    pos = getCursorPos(e);
+
+    x = pos.x;
+
+    y = pos.y;
+
+
+
+    glass.style.left = (x - glass.offsetWidth / 2) + "px";
+
+    glass.style.top = (y - glass.offsetHeight / 2) + "px";
+
+
+
+    glass.style.backgroundPosition = "-" + ((x * zoom) - glass.offsetWidth / 2) + "px -" + ((y * zoom) - glass.offsetHeight / 2) + "px";
+
   }
+
+
+
+  function getCursorPos(e) {
+
+    const a = img.getBoundingClientRect();
+
+    let x = e.pageX - a.left - window.pageXOffset;
+
+    let y = e.pageY - a.top - window.pageYOffset;
+
+    return { x, y };
+
+  }
+
 }
+
+
+
+// apply to image
+
+magnify("myimage1", 2);
+magnify("myimage2", 2);
+magnify("myimage3", 2);
+magnify("myimage4", 2);
+

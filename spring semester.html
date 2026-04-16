@@ -1,53 +1,78 @@
 <!DOCTYPE html>
 <html>
-  
+
   <head>
     <link rel="stylesheet" href="styles.css"> 
     <!--the heading-->
     <title>Spring Semester</title>
   </head>
 
-  <body>
+  <body id="page">
     <!--start body-->
-    
-    <h1>
-      <!--page title-->
+
+    <div class="header_style">
+      <!--title-->
       Spring Semester
-    </h1>
-    
-    <nav class="navbar">
+    </div>
+
+    <<nav class="navbar" id="navbar">
       <ul>
         <li><a href="home page.html">Home</a></li>
         <li><a href="fall semester.html">Fall Semester</a></li>
         <li><a href="spring semester.html">Spring Semester</a></li>
-        <li><a href="about us.html">About Us</a></li>
+        <li><a href="our team.html">About Us</a></li>
         <li><a href="films.html">Films</a></li>
+        <li><button id="darktoggle">Dark Mode</button></li>
       </ul>
-
+      <button id="darktoggle">Dark Mode</button>
     </nav>
 
     <main>
-      <p>
-        <!--meeting dates paragraph-->
-        <h3><b>Meeting Dates:</b></h3>
-        Coming Soon<br>
-        <input type ="button" onclick="alert('meetings are in room F204')" value="meeting info">
-      </p>
-      
-      <p>
-        <!--description of spring semester-->
-        Description of what we do in this semester:<br>
-        Using the skills we learned in the first semester, everyone splits off into groups and makes their own short film. Sometimes there is a theme, other years it will be completely open to any type of short film - whether it be a murder mystery, comedy, or music video! At the end of the semester after films have been finished, submitted, and approved, we host an awards show and film screening where all approved films are shown and attendees vote in various categories for each film. This is a great way to celebrate our accomplishments and share everyone's art!
+      <div class="container">
 
-      </p>
+        <!--TOP ROW-->
+        <div class="top_row">
+          <div class="no_border">
+            Meeting Dates:
+          </div>
 
-      <p>
-        <!--attendance form-->
-        Fall Attendance Form:<br><a href="https://docs.google.com/forms/d/e/1FAIpQLSebQwOn5xffCp9n6KnHh6194qI5WAbo65K4WFHWieTO3Dr2cg/viewform?usp=header" target="_blank" rel="noopener noreferrer">Link to attendance form</a>
-      </p>
-    
+          <div class="no_border">
+            Attendance Form:
+          </div>
+
+          <div class="no_border">
+            Description:
+          </div>
+        </div>
+
+        <!--BOTTOM ROW-->
+        <div class="bottom_row">
+          <div class="red_border">
+            <div>
+              <input type ="button" onclick="alert('meetings are in room F204')" value="meeting info">
+            </div>
+            <ul>
+              <li>April 23</li>
+              <li>April 30</li>
+              <li>May 9</li>
+            </ul>
+
+            <div class="calendar_image">
+              <img src="/image/cal-pic.png" alt="calendar image">
+            </div>
+
+          </div>
+
+          <div class="red_border">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSebQwOn5xffCp9n6KnHh6194qI5WAbo65K4WFHWieTO3Dr2cg/viewform?usp=header" target="_blank" rel="noopener noreferrer">Link to attendance form</a>
+          </div>
+
+          <div class="red_border">
+            Using the skills we learned in the first semester, everyone splits off into groups and makes their own short film. Sometimes there is a theme, other years it will be completely open to any type of short film - whether it be a murder mystery, comedy, or music video! At the end of the semester after films have been finished, submitted, and approved, we host an awards show and film screening where all approved films are shown and attendees vote in various categories for each film. This is a great way to celebrate our accomplishments and share everyone's art!
+          </div>
+        </div>
+      </div>
     </main>
-
+    <script src="script.js"></script>
   </body>
-
 </html>
