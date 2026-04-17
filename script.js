@@ -1,3 +1,4 @@
+//nav bar shrink
 window.addEventListener("scroll", function () {
     const navbar = document.getElementById("navbar");
 
@@ -8,6 +9,7 @@ window.addEventListener("scroll", function () {
     }
 });
 
+//dark toggle
 const button = document.getElementById("darktoggle");
 const body = document.getElementById("page");
 
@@ -15,6 +17,7 @@ button.addEventListener("click", function () {
   body.classList.toggle("dark-mode");
 });
 
+//zoom
 function magnify(imgID, zoom) {
 
   const img = document.getElementById(imgID);
@@ -47,8 +50,6 @@ function magnify(imgID, zoom) {
     glass.style.backgroundPosition = "-" + ((x * zoom) - glass.offsetWidth / 2) + "px -" + ((y * zoom) - glass.offsetHeight / 2) + "px";
 
   }
-
-
 
   function getCursorPos(e) {
 
