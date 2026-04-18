@@ -45,6 +45,54 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 
+/* film section */
+.theater-sign {
+text-align: center;
+margin-top: 120px;
+}
+
+.theater-sign img {
+width: 400px;
+}
+
+.movies-container {
+display: flex;
+justify-content: center;
+align-items: flex-start;
+gap: 40px;
+margin-top: 40px;
+flex-wrap: wrap;
+}
+
+.movie-card {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.movie-img {
+width: 150px;
+height: 150px;
+border: 2px solid rgb(199, 56, 56);
+margin-bottom: 10px;
+}
+
+.movie-info {
+font-size: 16px;
+text-align: left;
+margin-bottom: 10px;
+}
+
+.ticket {
+width: 120px;
+cursor: grab;
+position: absolute;
+}
+
+.snack img,
+.drinks img {
+width: 120px;
+}
 
 /*style for fall/spring semester */
 .container {

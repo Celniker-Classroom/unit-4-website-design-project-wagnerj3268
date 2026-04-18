@@ -74,3 +74,30 @@ magnify("myimage2", 2);
 magnify("myimage3", 2);
 magnify("myimage4", 2);
 
+//ticket dragger
+const tickets = document.querySelectorAll(".ticket");
+
+tickets.forEach(ticket => {
+let isDragging = false;
+
+ticket.addEventListener("mousedown", function(e) {
+isDragging = true;
+ticket.style.position = "absolute";
+moveAt(e);
+});
+
+document.addEventListener("mousemove", function(e) {
+if (isDragging) {
+moveAt(e);
+}
+});
+
+document.addEventListener("mouseup", function() {
+isDragging = false;
+});
+
+function moveAt(e) {
+ticket.style.left = e.pageX - ticket.offsetWidth / 2 + "px";
+ticket.style.top = e.pageY - ticket.offsetHeight / 2 + "px";
+}
+});
