@@ -1,117 +1,199 @@
-/* Add Global styles here */
+/*all pages */
 body {
-    background-color:white;
-    margin: 0px;
-    color:black;
-    transition: all 0.3s ease; 
+    background-color: white;
+    margin: 0;
+    color: black;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding-top: 200px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 main {
-    margin-left:20px;
-    margin-right:20px;
-    font-family: 'Times New Roman', Times, serif;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
     color: black;
-    
+    font-family: 'Times New Roman', Times, serif;
+    margin: 10px;
 }
-h1 {
-    color:black;
-    font-family:'Times New Roman', Times, serif;
+
+p {
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+a {
+    color: rgb(199, 56, 56);
+}
+
+ul, ol {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+/* header style*/
+.page-title {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    color: black;
     text-align: center;
-    margin:10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    margin: 0;
+    padding: 10px 0;
+    z-index: 1001;
+    box-sizing: border-box;
+    border-bottom: 2px solid rgb(199, 56, 56);
 }
 
-h2 {
-    color:black;
-    font-family:'Times New Roman', Times, serif;
-}
-.main-top-space {
-    margin-top: 200px;
+/*nav bar*/
+.navbar {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: rgb(199, 56, 56);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
 }
 
-/*style for table*/
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 5px;
+    display: flex;
+    gap: 35px;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    text-align: center;
+    font-size: 20px;
+}
+
+.navbar a:hover {
+    background-color: white;
+    color: black;
+}
+
+.navbar.shrink {
+    padding: 2px 0;
+    transform: scale(0.97);
+}
+
+/*toggle dark mode button */
+#darktoggle {
+    margin: 5px;
+    padding: 8px 12px;
+    border: 3px dotted white;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(199, 56, 56);
+    color: white;
+}
+
+#darktoggle:hover {
+    background-color: white;
+    color: black;
+    border-color: rgb(199, 56, 56);
+}
+
+/* dark mode style*/ 
+body.dark-mode {
+    background-color: rgb(40, 40, 40);
+    color: white;
+}
+
+body.dark-mode p,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode li {
+    color: white;
+}
+
+body.dark-mode .page-title {
+    background-color: rgb(40, 40, 40);
+    color: white;
+    border-bottom: 2px solid rgb(199, 56, 56);
+}
+
+body.dark-mode .navbar {
+    background-color: rgb(199, 56, 56);
+}
+
+body.dark-mode .no_border {
+    color: white;
+}
+
+body.dark-mode .red_border {
+    color: white;
+}
+
+body.dark-mode table {
+    color: white;
+}
+/*tables */
 table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 50%;
+    font-family: 'Times New Roman', Times, serif;
+    border-collapse: collapse;
+    width: 50%;
 }
 
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
+th, td {
+    border: 1px solid black;
+    text-align: center;
+    padding: 8px;
 }
 
 tr:nth-child(even) {
-  background-color: #dddddd;
+    background-color: #dddddd;
+}
+/*red borders*/
+.red_border {
+    border: 2px solid rgb(199, 56, 56);
+    padding: 15px;
+    font-size: 20px;
+    list-style: none;
+    font-family: 'Times New Roman', Times, serif;
 }
 
-/* film section */
-.theater-sign {
-text-align: center;
-margin-top: 120px;
-}
-
-.theater-sign img {
-width: 400px;
-}
-
-.movies-container {
-display: flex;
-justify-content: center;
-align-items: flex-start;
-gap: 40px;
-margin-top: 40px;
-flex-wrap: wrap;
-}
-
-.movie-card {
-display: flex;
-flex-direction: column;
-align-items: center;
-}
-
-.movie-img {
-width: 150px;
-height: 150px;
-border: 2px solid rgb(199, 56, 56);
-margin-bottom: 10px;
-}
-
-.movie-info {
-font-size: 16px;
-text-align: left;
-margin-bottom: 10px;
-}
-
-.ticket {
-width: 120px;
-cursor: grab;
-position: absolute;
-}
-
-.snack img,
-.drinks img {
-width: 120px;
-}
-
-/*style for fall/spring semester */
+/*fall and spring semester*/ 
 .container {
     display: flex;
     gap: 20px;
     flex-direction: column;
 }
 
-.top_row{
+.top_row {
     display: flex;
     justify-content: space-between;
     gap: 20px;
 }
 
-.bottom_row{
+.bottom_row {
     display: flex;
     justify-content: space-between;
     gap: 20px;
 }
+
 .top_row > div,
 .bottom_row > div {
     flex: 1;
@@ -123,14 +205,7 @@ width: 120px;
     font-size: 40px;
     color: black;
     margin-top: 10px;
-}
-
-.red_border {
-    border: 2px;
-    border-color: rgb(199, 56, 56);
-    border-style: solid;
-    padding: 15px;
-    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .calendar_image {
@@ -138,21 +213,7 @@ width: 120px;
     height: auto;
 }
 
-.header_style {
-    color: black;
-    font-size: 60px;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-.about_us_image {
-    width: 250px;
-    height:auto;
-    margin:10px;
-}
-/*end of fall/spring semseter style */
-
-/*style for our team */
+/*about us page*/
 .team_grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -167,25 +228,22 @@ width: 120px;
 }
 
 .names_about_us {
-    font-size:20px;
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-top: 10px;
-    margin-bottom: 15px;
+    font-size: 20px;
+    margin: 10px 15px 15px 15px;
     font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .red_border_about_us {
     color: black;
-    border-style:solid;
-    border-color:rgb(199, 56, 56);
+    border: 2px solid rgb(199, 56, 56);
     width: 100%;
     max-width: 150px;
-    padding:10px;
+    padding: 10px;
     margin: 10px;
-    font-size:20px;
-    text-align:start;
-    
+    font-size: 16px;
+    text-align: left;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .img_about_us {
@@ -194,144 +252,85 @@ width: 120px;
     border-radius: 10px;
 }
 
-.img-lainey { grid-area: limg; }
-.q-lainey { grid-area: ltxt; }
-
-.img-rozy { grid-area: rimg; }
-.q-rozy { grid-area: rtxt; }
-
+.img-lainey  { grid-area: limg; }
+.q-lainey    { grid-area: ltxt; }
+.img-rozy    { grid-area: rimg; }
+.q-rozy      { grid-area: rtxt; }
 .name-lainey { grid-area: lname; }
-.name-rozy { grid-area: rname; }
-
-.img-julia { grid-area: jimg; }
-.q-julia { grid-area: jtxt; }
-
+.name-rozy   { grid-area: rname; }
+.img-julia   { grid-area: jimg; }
+.q-julia     { grid-area: jtxt; }
 .img-anushka { grid-area: aimg; }
-.q-anushka { grid-area: atxt; }
+.q-anushka   { grid-area: atxt; }
+.name-julia  { grid-area: jname; }
+.name-anushka{ grid-area: aname; }
 
-.name-julia { grid-area: jname; }
-.name-anushka { grid-area: aname; }
-
-
-.sub_title {
-    font-size: 30px;
-    margin: 10px;
-
-}
-.link_style {
-    font-size: 10px;
-}
-
-
-.center_align {
-    text-align: center;
-}
-/*nav bar style */
-.navbar ul{
-    list-style-type: none;
-    background-color: rgb(199, 56, 56); 
-    padding: 5px;
-    margin: 5px;
-
-    display: flex;
-    gap: 35px;
-    align-items: center;
-    justify-content: center;
-}
-
-.navbar a{
-    color:white;
-    text-decoration: none;
-    padding: 15px;
-    display: block;
-    text-align: center;
-    
-}
-
-.navbar a:hover{
-    background-color: white;
-    color: black;
-    font-size:30px;
-    text-align: center;
-}
-
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: rgb(199, 56, 56);
-    transition: all 0.3s ease;
-    padding: 20px;
-    z-index: 1000;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.navbar.shrink {
-    padding: 5px 0;
-    transform: scale(0.95);
-}
-
-/* end of nav bar style*/
-
-/*dark toggle button style */
-#darktoggle {
-    margin: 10px;
-    padding: 10px;
-    border: 3px;
-    border-style: dotted;
-    border-color: rgb(199, 56, 56);
-    cursor: pointer;
-    border-radius: 6px;
-    font-size: 20px;
-    font-family:'Times New Roman', Times, serif;
-    background-color: white;
-    color: black;
-}
-
-body.dark-mode {
-    background-color: rgb(199, 56, 56);
-    color: white;
-}
-div.dark-mode {
-    color:white
-}
- 
-body.dark-mode .navbar {
-    background-color: white;
-    color:black;
-}
-/* end of dark mode button*/
-
-/* magnifier glass */
 .img-magnifier-container {
     position: relative;
 }
+
 .img-magnifier-glass {
     position: absolute;
     border: 3px solid #000;
     border-radius: 50%;
-    cursor:none;
+    cursor: none;
     width: 100px;
     height: 100px;
     background-repeat: no-repeat;
     background-color: white;
     pointer-events: none;
 }
-table, th, td {
-    float:left;
-    border: 1px solid black;
+
+/*films page */
+.theater-sign {
     text-align: center;
+    margin-top: 20px;
 }
 
+.theater-sign img {
+    width: 400px;
+}
 
+.movies-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
 
-p {
-    color:black;
+.movie-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.movie-img {
+    width: 150px;
+    height: 150px;
+    border: 2px solid rgb(199, 56, 56);
+    margin-bottom: 10px;
+}
+
+.movie-info {
+    font-size: 16px;
+    text-align: left;
+    margin-bottom: 10px;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 20px;
 }
 
+.ticket {
+    width: 120px;
+    cursor: grab;
+    position: relative;
+    margin-top: 10px;
+}
 
+.snack img {
+    width: 120px;
+}
+
+.drinks img {
+    width: 120px;
+}

@@ -69,35 +69,38 @@ function magnify(imgID, zoom) {
 
 // apply to image
 
+if (document.getElementById("myimage1")) {
 magnify("myimage1", 2);
 magnify("myimage2", 2);
 magnify("myimage3", 2);
 magnify("myimage4", 2);
+}
 
 //ticket dragger
 const tickets = document.querySelectorAll(".ticket");
 
 tickets.forEach(ticket => {
-let isDragging = false;
+  let isDragging = false;
 
-ticket.addEventListener("mousedown", function(e) {
-isDragging = true;
-ticket.style.position = "absolute";
-moveAt(e);
-});
 
-document.addEventListener("mousemove", function(e) {
-if (isDragging) {
-moveAt(e);
-}
-});
+  ticket.addEventListener("mousedown", function(e) {
+    isDragging = true;
+    ticket.style.cursor = "grabbing"; 
+    ticket.style.position = "fixed";
+    moveAt(e);
+  });
 
-document.addEventListener("mouseup", function() {
-isDragging = false;
-});
+  document.addEventListener("mousemove", function(e) {
+    if (isDragging) moveAt(e);
+  });
 
-function moveAt(e) {
-ticket.style.left = e.pageX - ticket.offsetWidth / 2 + "px";
-ticket.style.top = e.pageY - ticket.offsetHeight / 2 + "px";
-}
+  document.addEventListener("mouseup", function() {
+    isDragging = false;
+    ticket.style.cursor = "grab"; 
+  });
+
+  function moveAt(e) {
+    ticket.style.left = e.pageX - ticket.offsetWidth / 2 + "px";
+    ticket.style.top = e.pageY - ticket.offsetHeight / 2 + "px";
+  }
 });
