@@ -157,22 +157,36 @@ body.dark-mode .names_about_us {
 body.dark-mode table {
     color: white;
 }
-/*tables */
-table {
-    font-family: 'Times New Roman', Times, serif;
+/*snak table */
+.snack-table-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.snack-table {
+    width: 400px;
     border-collapse: collapse;
-    width: 50%;
-}
-
-th, td {
-    border: 1px solid black;
     text-align: center;
-    padding: 8px;
 }
 
-tr:nth-child(even) {
-    background-color: #dddddd;
+.snack-table td {
+    border: 1px solid black;
+    padding: 10px;
+    vertical-align: top;
 }
+
+.snack-table img {
+    width: 100px;
+}
+
+.snack-table ol {
+    text-align: left;
+    font-size: 16px;
+    margin: 5px 0;
+    padding-left: 20px;
+}
+
 /*red borders*/
 .red_border {
     border: 2px solid rgb(199, 56, 56);
