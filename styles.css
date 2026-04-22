@@ -48,7 +48,6 @@ ul, ol {
     padding: 10px 0;
     z-index: 1001;
     box-sizing: border-box;
-    border-bottom: 2px solid rgb(199, 56, 56);
 }
 
 /*nav bar*/
@@ -147,6 +146,14 @@ body.dark-mode .red_border {
     color: white;
 }
 
+body.dark-mode .red_border_about_us {
+    color:white;
+}
+
+body.dark-mode .names_about_us {
+    color:white;
+}
+
 body.dark-mode table {
     color: white;
 }
@@ -171,8 +178,8 @@ tr:nth-child(even) {
     border: 2px solid rgb(199, 56, 56);
     padding: 15px;
     font-size: 20px;
-    list-style: none;
     font-family: 'Times New Roman', Times, serif;
+    list-style: none;
 }
 
 /*fall and spring semester*/ 
@@ -238,7 +245,7 @@ tr:nth-child(even) {
     color: black;
     border: 2px solid rgb(199, 56, 56);
     width: 100%;
-    max-width: 150px;
+    max-width: 300px;
     padding: 10px;
     margin: 10px;
     font-size: 16px;
@@ -307,7 +314,7 @@ tr:nth-child(even) {
 }
 
 .movie-img {
-    width: 150px;
+    width: 250px;
     height: 150px;
     border: 2px solid rgb(199, 56, 56);
     margin-bottom: 10px;
@@ -333,4 +340,34 @@ tr:nth-child(even) {
 
 .drinks img {
     width: 120px;
+}
+
+/* home page*/
+.home_top_row {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+.home_column {
+    flex: 1;
+}
+
+.home_center {
+    text-align: center;
+}
+
+.home_cinema_img {
+    width: 100%;
+    max-width: 300px;
+}
+
+.club-day-pics {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.club-day-pics img {
+    width: 30%;
 }

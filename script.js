@@ -21,11 +21,22 @@ button.addEventListener("click", function () {
 function magnify(imgID, zoom) {
 
   const img = document.getElementById(imgID);
+  if (!img) return;
+
   const glass = document.createElement("div");
   glass.setAttribute("class", "img-magnifier-glass");
   img.parentElement.insertBefore(glass, img);
-  glass.style.backgroundImage = "url('" + img.src + "')";
-  glass.style.backgroundSize = (img.width * zoom) + "px " + (img.height * zoom) + "px";
+
+  function setupGlass() {
+    glass.style.backgroundImage = "url('" + img.src + "')";
+    glass.style.backgroundSize = (img.width * zoom) + "px " + (img.height * zoom) + "px";
+  }
+  if (img.complete) {
+    setupGlass();
+  } else {
+    img.addEventListener("load",setupGlass)
+  }
+
   const bw = 3;
   glass.addEventListener("mousemove", moveMagnifier);
   img.addEventListener("mousemove", moveMagnifier);
@@ -39,16 +50,11 @@ function magnify(imgID, zoom) {
 
     y = pos.y;
 
-
-
     glass.style.left = (x - glass.offsetWidth / 2) + "px";
 
     glass.style.top = (y - glass.offsetHeight / 2) + "px";
 
-
-
     glass.style.backgroundPosition = "-" + ((x * zoom) - glass.offsetWidth / 2) + "px -" + ((y * zoom) - glass.offsetHeight / 2) + "px";
-
   }
 
   function getCursorPos(e) {
@@ -70,10 +76,12 @@ function magnify(imgID, zoom) {
 // apply to image
 
 if (document.getElementById("myimage1")) {
-magnify("myimage1", 2);
-magnify("myimage2", 2);
-magnify("myimage3", 2);
-magnify("myimage4", 2);
+    window.addEventListener("load", function() {
+        magnify("myimage1", 2);
+        magnify("myimage2", 2);
+        magnify("myimage3", 2);
+        magnify("myimage4", 2);
+    });
 }
 
 //ticket dragger
